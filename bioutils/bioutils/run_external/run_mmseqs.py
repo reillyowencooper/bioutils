@@ -99,6 +99,10 @@ class MmseqsSearchHit(object):
         
   
 class MmseqsParser(object):
+    """Parses an MMseqs output file in tab format
+    
+    Uses different parser depending on the type of MMseqs module (right now only taxonomy and search supported)
+    """
     def __init__(self, input_file, input_type = 'search'):
         self.input_file = input_file
         if input_type == 'search':
